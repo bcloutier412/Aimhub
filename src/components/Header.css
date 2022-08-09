@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a475e;
+  }
+  .header-text {
+    font-size: 2rem;
+    margin: 20px;
+    padding: 0 20px;
+    font-weight: 700;
+    color: #c7d5e0;
+    text-shadow: 1.2px 1.2px 0px #2a475e;
+  }
+  .horizontal-line {
+    height: 2px;
+    background-color: #006d77;
+    width: 25%;
+  }

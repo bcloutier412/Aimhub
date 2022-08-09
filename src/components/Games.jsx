@@ -1,5 +1,5 @@
-import './MainContainer.css'
-export default function MainContainer() {
+import './Games.css'
+export default function Games() {
     return(
         <div className='MainContainer'>Hello im the main container</div>
     )

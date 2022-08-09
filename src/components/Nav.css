@@ -1,5 +1,7 @@
 .Nav {
-    width: 33.3%;
+    width: 25%;
     height: 100vh;
-    background-color: #f8edeb;
+    background-color: #1b2838;
+    text-align: center;
+    border: 5px solid #2a475e;
 }
