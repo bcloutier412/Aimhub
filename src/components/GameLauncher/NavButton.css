@@ -9,6 +9,7 @@
     border: 2px solid transparent;
     vertical-align: middle;
     display: flex;
+    align-items: center;
 
 }
 
