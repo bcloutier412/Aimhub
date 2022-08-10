@@ -5,3 +5,7 @@
     text-align: center;
     border: 5px solid #2a475e;
 }
+
+.active-button {
+    background-color: red;
+}

@@ -1,0 +1,27 @@
+.button {   
+    text-decoration: none;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: #1b2838;
+    padding: 10px;
+    color: white;
+    text-align: start;
+    border: 2px solid transparent;
+    vertical-align: middle;
+    display: flex;
+
+}
+
+.button:active {
+    text-decoration: none;
+}
+.button:hover {
+    background-color: #2a475e;
+    border: 2px solid #1b2838;
+}
+
+.button img {
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+}
