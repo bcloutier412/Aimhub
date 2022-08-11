@@ -34,7 +34,8 @@ header {
     font-size: 2rem;
     margin-bottom: 20px;
 }
-button {
+.button {
+    cursor: crosshair;
     display: flex;
     background-color: green;
     width: 150px;
@@ -46,7 +47,7 @@ button {
     font-size: 1rem;
     color: white;
 }
-button img {
+.button img {
     height: 20px;
     width: auto;
     margin-right: 10px;

@@ -37,10 +37,10 @@ export default function Games() {
             <div className={styles.gameInfo}>
               <div className={styles.gameHeader}>{game.name}</div>
               <NavLink to={game.route} style={{ textDecoration: "none" }}>
-                <button>
+                <div className={styles.button}>
                   <img alt="play button" src={playBtn} />
                   <span className={styles.playText}>PLAY</span>
-                </button>
+                </div>
               </NavLink>
             </div>
           </div>
