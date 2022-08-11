@@ -1,5 +1,6 @@
 import "./Games.css";
 import { NavLink } from "react-router-dom";
+import playBtn from "../../assets/playbtn.png";
 const games = [
   {
     id: 0,
@@ -13,7 +14,7 @@ const games = [
   },
   {
     id: 2,
-    name: "Reaction Trainer",
+    name: "Im not sure yet",
     route: "../Game3",
   },
 ];
@@ -24,9 +25,15 @@ export default function Games() {
       {games.map((game) => {
         return (
           <div className="game-widget" key={game.id}>
-            <NavLink to={game.route} style={{ textDecoration: "none" }}>
-              <div className="play-button">PLAY</div>
-            </NavLink>
+            <div className="game-info">
+              <div className="game-header">{game.name}</div>
+              <NavLink to={game.route} style={{ textDecoration: "none" }}>
+                <button>
+                  <img alt="play button" src={playBtn} />
+                  <span className="play-text">PLAY</span>
+                </button>
+              </NavLink>
+            </div>
           </div>
         );
       })}

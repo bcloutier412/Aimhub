@@ -20,3 +20,36 @@ header {
     margin: 10px;
     margin-top: 0;
 }
+.game-info {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.game-header {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+button {
+    display: flex;
+    background-color: green;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid #2a475e;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+}
+button img {
+    height: 20px;
+    width: auto;
+    margin-right: 10px;
+}
+.play-text {
+    transform: translateY(1px);
+}
