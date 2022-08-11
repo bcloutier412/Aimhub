@@ -11,18 +11,22 @@ const games = [
     name: "Reaction Trainer",
     route: "../Game2",
   },
+  {
+    id: 2,
+    name: "Reaction Trainer",
+    route: "../Game3",
+  },
 ];
-// <NavLink to={game.route} style={{ textDecoration: "none" }}>
-//                 <div className="play-button">PLAY</div>
-//               </NavLink>
 export default function Games() {
   return (
-    <div>
+    <div className="games">
       <header>GAMES</header>
       {games.map((game) => {
         return (
           <div className="game-widget" key={game.id}>
-            
+            <NavLink to={game.route} style={{ textDecoration: "none" }}>
+              <div className="play-button">PLAY</div>
+            </NavLink>
           </div>
         );
       })}

@@ -1,9 +1,12 @@
 import "./Nav.css";
 import Header from "./Header";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import NavButton from "./NavButton";
 import profile from "../../assets/profile.png";
 import target from "../../assets/target.png";
+import stats from "../../assets/stats.png";
+import chat from "../../assets/chat.png";
+import React, { useState } from "react";
 
 const buttons = [
   {
@@ -18,17 +21,39 @@ const buttons = [
     route: "/games",
     src: target,
   },
+  {
+    id: 2,
+    text: "STATS",
+    route: "/",
+    src: stats,
+  },
+  {
+    id: 3,
+    text: "CHAT",
+    route: "/",
+    src: chat,
+  },
 ];
 
 export default function Nav() {
+  const [activeButton, changeActiveButton] = useState(1);
   return (
     <div className="Nav">
       <Header text={"Aim Hub"} />
-      {buttons.map((button) => {
+      {buttons.map(({id, route, text, src}) => {
         return (
-          <Link key={button.id} to={button.route} style={{ textDecoration: "none" }}>
-            <NavButton text={button.text} src={button.src} />
-          </Link>
+          <NavLink
+            key={id}
+            to={route}
+            style={{ textDecoration: "none" }}
+            onClick={() => changeActiveButton(id)}
+          >
+            <NavButton
+              text={text}
+              src={src}
+              activeStyle={activeButton === id ? "#2a475e" : null}
+            />
+          </NavLink>
         );
       })}
     </div>
