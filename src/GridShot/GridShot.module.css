@@ -1,0 +1,15 @@
+.body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, #6c757d 1px, rgba(0, 0, 0, 0) 1px);
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+.homeBtn {
+  position: absolute;
+  height: 40px;
+  width: auto;
+  top: 23px;
+  left: 20px;
+}

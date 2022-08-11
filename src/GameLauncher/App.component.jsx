@@ -1,6 +1,6 @@
 import styles from "./App.module.css";
 import { Outlet } from "react-router-dom";
-import Nav from "./Nav.component";
+import Nav from "./Nav/Nav.component";
 
 export default function GameLauncher() {
   return (

@@ -1,13 +1,15 @@
 import React from "react";
 import styles from "./Header.module.css";
 
-function Header({ text }) {
+function Header() {
   return (
+    <>
       <div className={styles.header}>
         <div className={styles.horizontalLine}></div>
-        <h1 className={styles.headerText}>{text}</h1>
+        <h1 className={styles.headerText}>Dino's Aim Labs</h1>
         <div className={styles.horizontalLine}></div>
       </div>
+    </>
   );
 }
 

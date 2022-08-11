@@ -5,10 +5,10 @@ import Header from './Header.component'
 import NavButton from './NavButton.components';
 
 //ASSETS
-import profile from "./assets/profile.png";
-import target from "./assets/target.png";
-import stats from "./assets/stats.png";
-import chat from "./assets/chat.png";
+import profile from "../assets/profile.png";
+import target from "../assets/target.png";
+import stats from "../assets/stats.png";
+import chat from "../assets/chat.png";
 
 const buttons = [
     {

@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .headerText {
+    font-size: 2rem;
+    margin: 0 20px;
+    margin-top: 20px;
+    padding: 0 20px;
+    font-weight: 700;
+    /* padding: 8px 32px; */
+    background-color: white;
+    color: #4a4e69;
+    text-shadow: 1.2px 1.2px 0px #14213d;
+  }
+  .horizontalLine {
+    height: 2px;
+    background-color: #006d77;
+    width: 33%;
+    transform: translateY(10px);
+  }

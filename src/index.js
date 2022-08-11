@@ -3,9 +3,10 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import GameLauncher from "./GameLauncher/App.component";
-import Games from "./GameLauncher/Games.component";
+import Games from "./GameLauncher/Games/Games.component";
 import GridShot from './GridShot/GridShot.component';
 import ReactionTimer from './ReactionTrainer/ReactionTimer.component';
+import Profile from './GameLauncher/Profile/Profile.component.jsx'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,7 +21,7 @@ root.render(
       */}
         <Route path="/" element={<GameLauncher />}>
           <Route index element={<Games />} />
-          <Route path="profile" element={<GameLauncher />} />
+          <Route path="profile" element={<Profile />} />
           <Route path="games" element={<Games />} />
         </Route>
         {/* 

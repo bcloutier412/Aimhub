@@ -1,6 +1,12 @@
 import styles from "./Games.module.css";
 import { NavLink } from "react-router-dom";
-import playBtn from "./assets/playbtn.png";
+import playBtn from "../assets/playbtn.png";
+
+/*
+  Games Data Array
+    @Desc: This Array holds all the data to create n number of game widgets
+  
+*/
 const games = [
   {
     id: 0,
@@ -14,6 +20,13 @@ const games = [
   },
 ];
 
+/*
+  Games Component
+    @Desc: This component returns n number of game widgets where 
+    it shows data about the different games based on the Game Array.
+    Each game widet will have a button to change the react route to 
+    start the game (Changing the main window to the Game)
+*/
 export default function Games() {
   return (
     <div className={styles.games}>
