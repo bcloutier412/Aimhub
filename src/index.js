@@ -7,6 +7,7 @@ import Games from "./GameLauncher/Games/Games.component";
 import GridShot from './GridShot/GridShot.component';
 import ReactionTimer from './ReactionTrainer/ReactionTimer.component';
 import Profile from './GameLauncher/Profile/Profile.component.jsx'
+import Stats from './GameLauncher/Stats/Stats.component.jsx'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,6 +24,7 @@ root.render(
           <Route index element={<Games />} />
           <Route path="profile" element={<Profile />} />
           <Route path="games" element={<Games />} />
+          <Route path="stats" element={<Stats />} />
         </Route>
         {/* 
           Grid Shot Game

@@ -93,7 +93,7 @@ function ClearDataBtn() {
 }
 
 function ExitGame() {
-    return <div className={`${styles.menuBtn} ${styles.bottomBtn}`} style={{cursor: 'crosshair'}}>Exit Game</div>
+    return <div className={`${styles.menuBtn} ${styles.bottomBtn}`} style={{cursor: 'crosshair'}}>EXIT GAME</div>
 }
 /*
   Menu Component

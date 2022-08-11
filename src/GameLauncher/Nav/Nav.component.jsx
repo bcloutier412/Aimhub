@@ -26,7 +26,7 @@ const buttons = [
     {
       id: 2,
       text: "STATS",
-      route: "/",
+      route: "/stats",
       src: stats,
     },
     {
