@@ -81,9 +81,11 @@ class GridShot extends React.Component {
         break;
     }
     return (
-      <div className={styles.body}>
-        <Header />
-        <div>{stage}</div>
+      <div>
+        <div className={styles.body}>
+          <Header />
+          <div>{stage}</div>
+        </div>
       </div>
     );
   }

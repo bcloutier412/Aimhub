@@ -66,9 +66,9 @@ class Timer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      minute: this.props.minute,
-      // minute: 0,
-      second: 0,
+      // minute: this.props.minute,
+      minute: 0,
+      second: 5,
     };
   }
   formatSeconds(second) {
@@ -91,6 +91,7 @@ class Timer extends React.Component {
       this.setState({ second: second - 1 });
       if (minute === 0 && second === 1) {
         this.props.stopPlay();
+        this.props.switchStop();
       }
       setTimeout(() => {
         this.runTimer();
@@ -152,6 +153,7 @@ function InGameStats(props) {
         minute={props.minute}
         startTimer={props.startTimer}
         stopPlay={props.stopPlay}
+        switchStop={props.switchStop}
       />
     );
   } else {
@@ -163,6 +165,16 @@ function InGameStats(props) {
       <Countdown inPlay={props.inPlay} startPlay={props.startPlay} />
     </div>
   );
+}
+
+class Stop extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return <div>STOP</div>;
+  }
 }
 /*
   Game Component
@@ -179,6 +191,8 @@ class Game extends React.Component {
       accuracy: 0,
       score: 0,
       startTimer: false,
+      showStop: false,
+      showStats: false,
     };
   }
   increaseTotalShots() {
@@ -208,6 +222,9 @@ class Game extends React.Component {
   stopPlay() {
     this.setState({ inPlay: false });
   }
+  switchStop() {
+    this.setState({ showStop: !this.state.showStop });
+  }
   render() {
     const array = [];
     for (let i = 0; i < 7; i++) {
@@ -232,6 +249,7 @@ class Game extends React.Component {
           startTimer={this.state.startTimer}
           startPlay={this.startPlay.bind(this)}
           stopPlay={this.stopPlay.bind(this)}
+          switchStop={this.switchStop.bind(this)}
         />
         <div
           className={styles.gameBoard}
@@ -243,6 +261,7 @@ class Game extends React.Component {
           }}
         >
           {array}
+          {this.state.showStop && <Stop />}
         </div>
       </div>
     );
