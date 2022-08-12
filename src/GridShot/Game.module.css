@@ -1,0 +1,27 @@
+.gameBoard {
+    height: 90vh;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    transition: filter 1s;
+  }
+  
+  .target {
+    border: 1px solid black;
+    border-radius: 50px;
+    box-shadow: 2px 2px 0px rgba(20, 33, 61, 0.7);
+    position: absolute;
+  }
+  
+  .inGameStats {
+    text-align: center;
+  }
+  
+  .warn {
+    position: absolute;
+    font-size: 10rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }

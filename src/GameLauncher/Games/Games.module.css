@@ -1,10 +1,9 @@
 header {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     height: 58px;
-    margin-top: 20px;
-    margin-bottom: 5px;
+    margin-top: 14px;
 }
 .games {
     height: 100%;
@@ -22,16 +21,17 @@ header {
     margin-top: 0;
 }
 .gameInfo {
-    width: 20%;
+    width: 200px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    float: left;
 }
 .gameHeader {
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 .button {

@@ -3,7 +3,7 @@ import styles from "./GridShot.module.css";
 import React from "react";
 import Header from "./Header.component";
 import Menu from "./Menu.component";
-// import Game from "./Game";
+import Game from "./Game.component";
 // import Stats from "./Stats";
 
 /*
@@ -67,8 +67,18 @@ class GridShot extends React.Component {
           />
         );
         break;
-        default:
-            break;
+      case "Game":
+        stage = (
+          <Game
+            targetDiameter={this.state.targetDiameter}
+            targetColor={this.state.targetColor}
+            minute={this.state.minute}
+            key={this.state.key}
+          />
+        );
+        break;
+      default:
+        break;
     }
     return (
       <div className={styles.body}>
