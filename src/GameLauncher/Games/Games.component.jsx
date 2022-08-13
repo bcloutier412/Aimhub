@@ -1,6 +1,6 @@
-import styles from "./Games.module.css";
-import { NavLink } from "react-router-dom";
-import playBtn from "../assets/playbtn.png";
+import styles from './Games.module.css';
+import { NavLink } from 'react-router-dom';
+import playBtn from '../assets/playbtn.png';
 
 /*
   Games Data Array
@@ -10,14 +10,14 @@ import playBtn from "../assets/playbtn.png";
 const games = [
   {
     id: 0,
-    name: "Grid Shot",
-    route: "../GridShot",
+    name: 'Grid Shot',
+    route: '../GridShot',
     style: styles.gridShot
   },
   {
     id: 1,
-    name: "Reaction Trainer",
-    route: "../ReactionTrainer",
+    name: 'Reaction Trainer',
+    route: '../ReactionTrainer',
     style: ''
   },
 ];
@@ -40,7 +40,7 @@ export default function Games() {
               <div className={styles.gameHeader}>{game.name}</div>
               <NavLink to={game.route} style={{ textDecoration: "none" }}>
                 <div className={styles.button}>
-                  <img alt="play button" src={playBtn} />
+                  <img alt='play button' src={playBtn} />
                   <span className={styles.playText}>PLAY</span>
                 </div>
               </NavLink>

@@ -10,6 +10,10 @@ import target from "../assets/target.png";
 import stats from "../assets/stats.png";
 import chat from "../assets/chat.png";
 
+/*
+  Buttons Array
+    @Desc: This array contains all the different buttons and route paths that will be rendered to the nav container
+*/
 const buttons = [
     {
       id: 0,

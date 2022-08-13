@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./Game.module.css";
+import React from 'react';
+import styles from './Game.module.css';
 
 /*
   Target Component
@@ -123,7 +123,7 @@ class Countdown extends React.Component {
       setTimeout(() => {
         this.setState({ countdown: 1 });
         setTimeout(() => {
-          this.setState({ countdown: "GO!" });
+          this.setState({ countdown: 'GO!' });
           setTimeout(() => {
             this.props.startPlay();
             this.setState({ showCountdown: false });
