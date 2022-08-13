@@ -37,21 +37,40 @@ header {
 .button {
     cursor: crosshair;
     display: flex;
-    background-color: green;
+    background-color: #26ac15;
     width: 150px;
     height: 40px;
     cursor: pointer;
-    border: 1px solid #2a475e;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
     color: white;
+    clip-path: polygon(
+    0 30%,
+    7% 0,/* top left corner*/
+    90% 0,
+    100% 0%,
+    100% 70%,
+    93% 100%, /*bottom right corner*/
+    0% 100%,
+    0% 90%,
+    0% 100%
+  )
 }
 .button img {
     height: 20px;
     width: auto;
     margin-right: 10px;
 }
+.button:hover {
+    background-color: #2bc016;
+}
 .playText {
     transform: translateY(1px);
 }
+
+/* .gridShot {
+    back
+    background-size: 40px 40px;
+  background-image: radial-gradient(circle, #6c757d 1px, rgba(0, 0, 0, 0) 1px);
+} */

@@ -9,15 +9,25 @@
     vertical-align: middle;
     display: flex;
     align-items: center;
-
+    clip-path: polygon(
+    0 30%,
+    7% 0,/* top left corner*/
+    90% 0,
+    100% 0%,
+    100% 70%,
+    93% 100%, /*bottom right corner*/
+    0% 100%,
+    0% 90%,
+    0% 100%
+  )
 }
-
 .button:active {
     text-decoration: none;
 }
 .button:hover {
     background-color: #2a475e;
-    border: 2px solid #1b2838;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
 .button img {

@@ -12,11 +12,13 @@ const games = [
     id: 0,
     name: "Grid Shot",
     route: "../GridShot",
+    style: styles.gridShot
   },
   {
     id: 1,
     name: "Reaction Trainer",
     route: "../ReactionTrainer",
+    style: ''
   },
 ];
 
@@ -33,7 +35,7 @@ export default function Games() {
       <header>GAMES</header>
       {games.map((game) => {
         return (
-          <div className={styles.gameWidget} key={game.id}>
+          <div className={`${styles.gameWidget} ${game.style}`} key={game.id}>
             <div className={styles.gameInfo}>
               <div className={styles.gameHeader}>{game.name}</div>
               <NavLink to={game.route} style={{ textDecoration: "none" }}>

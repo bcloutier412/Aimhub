@@ -16,7 +16,14 @@
   .inGameStats {
     text-align: center;
   }
-  
+  .stats {
+    position: absolute;
+    font-size: 10rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
   .warn {
     position: absolute;
     font-size: 10rem;
@@ -24,4 +31,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+  }
+  .blurEffect {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
   }

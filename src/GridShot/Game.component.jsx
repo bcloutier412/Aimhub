@@ -91,7 +91,7 @@ class Timer extends React.Component {
       this.setState({ second: second - 1 });
       if (minute === 0 && second === 1) {
         this.props.stopPlay();
-        this.props.switchStop();
+        this.props.toggleStop();
       }
       setTimeout(() => {
         this.runTimer();
@@ -153,7 +153,7 @@ function InGameStats(props) {
         minute={props.minute}
         startTimer={props.startTimer}
         stopPlay={props.stopPlay}
-        switchStop={props.switchStop}
+        toggleStop={props.toggleStop}
       />
     );
   } else {
@@ -172,8 +172,30 @@ class Stop extends React.Component {
     super(props);
     this.state = {};
   }
+  componentDidMount() {
+    setTimeout(() => {
+      this.props.toggleStop();
+      this.props.toggleBlur();
+      setTimeout(() => {
+        this.props.toggleStats();
+      }, 1000);
+    }, 2000);
+  }
   render() {
-    return <div>STOP</div>;
+    return <div className={styles.warn}>STOP</div>;
+  }
+}
+class Stats extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+
+    }
+  }
+  render() {
+    return(
+      <div className={styles.stats}>Stats</div>
+    )
   }
 }
 /*
@@ -193,6 +215,7 @@ class Game extends React.Component {
       startTimer: false,
       showStop: false,
       showStats: false,
+      showBlur: false,
     };
   }
   increaseTotalShots() {
@@ -222,8 +245,14 @@ class Game extends React.Component {
   stopPlay() {
     this.setState({ inPlay: false });
   }
-  switchStop() {
+  toggleStats() {
+    this.setState({ showStats: !this.state.showStats})
+  }
+  toggleStop() {
     this.setState({ showStop: !this.state.showStop });
+  }
+  toggleBlur() {
+    this.setState({ showBlur: !this.state.showBlur });
   }
   render() {
     const array = [];
@@ -249,10 +278,10 @@ class Game extends React.Component {
           startTimer={this.state.startTimer}
           startPlay={this.startPlay.bind(this)}
           stopPlay={this.stopPlay.bind(this)}
-          switchStop={this.switchStop.bind(this)}
+          toggleStop={this.toggleStop.bind(this)}
         />
         <div
-          className={styles.gameBoard}
+          className={`${styles.gameBoard} ${this.state.showBlur && styles.blurEffect}`}
           onClick={() => {
             if (this.state.inPlay) {
               this.increaseTotalShots();
@@ -261,8 +290,15 @@ class Game extends React.Component {
           }}
         >
           {array}
-          {this.state.showStop && <Stop />}
         </div>
+        {this.state.showStop && 
+          <Stop
+            toggleStop={this.toggleStop.bind(this)}
+            toggleBlur={this.toggleBlur.bind(this)}
+            toggleStats={this.toggleStats.bind(this)}
+          />
+        }
+        {this.state.showStats && <Stats />}
       </div>
     );
   }
