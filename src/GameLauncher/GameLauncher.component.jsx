@@ -1,4 +1,4 @@
-import styles from './App.module.css';
+import styles from './GameLauncher.module.css';
 import { Outlet } from 'react-router-dom';
 import Nav from './Nav/Nav.component';
 import News from './News/News.component'
