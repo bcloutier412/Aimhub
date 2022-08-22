@@ -1,37 +1,39 @@
-.button {   
-    text-decoration: none;
-    font-size: 1.4rem;
-    width: 100%;
-    padding: 10px;
-    color: lightgrey;
-    text-align: start;
-    border: 2px solid transparent;
-    vertical-align: middle;
-    display: flex;
-    align-items: center;
-    clip-path: polygon(
+.button {
+  text-decoration: none;
+  font-size: 1rem;
+  width: 100%;
+  padding: 10px;
+  color: lightgrey;
+  text-align: start;
+  border: 2px solid transparent;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  margin-left: 0;
+  clip-path: polygon(
     0 30%,
-    7% 0,/* top left corner*/
-    90% 0,
+    7% 0,
+    /* top left corner*/ 90% 0,
     100% 0%,
     100% 70%,
-    93% 100%, /*bottom right corner*/
-    0% 100%,
+    93% 100%,
+    /*bottom right corner*/ 0% 100%,
     0% 90%,
     0% 100%
-  )
+  );
 }
 .button:active {
-    text-decoration: none;
+  text-decoration: none;
 }
 .button:hover {
-    background-color: #2a475e;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+  background-color: #2a475e;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 .button img {
-    width: 35px;
-    height: auto;
-    margin-right: 10px;
+  width: 35px;
+  height: auto;
+  margin-right: 10px;
 }

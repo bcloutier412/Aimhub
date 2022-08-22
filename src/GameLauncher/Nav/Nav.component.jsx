@@ -4,10 +4,6 @@ import { NavLink } from "react-router-dom";
 import NavButton from "./NavButton.components";
 
 //ASSETS
-import profile from "../assets/profile.png";
-import target from "../assets/target.png";
-import stats from "../assets/stats.png";
-import chat from "../assets/chat.png";
 
 /*
   Buttons Array
@@ -15,28 +11,22 @@ import chat from "../assets/chat.png";
 */
 const buttons = [
   {
-    id: 0,
-    text: "PROFILE",
-    route: "/profile",
-    src: profile,
-  },
-  {
     id: 1,
-    text: "GAMES",
+    text: "Games",
     route: "/games",
-    src: target,
+    iconClass: "gg-games",
   },
   {
     id: 2,
-    text: "STATS",
+    text: "Stats",
     route: "/stats",
-    src: stats,
+    iconClass: "gg-code-climate",
   },
   {
-    id: 3,
-    text: "CHAT",
-    route: "/",
-    src: chat,
+    id: 0,
+    text: "News",
+    route: "/news",
+    iconClass: "gg-file-document",
   },
 ];
 
@@ -58,14 +48,16 @@ export default function Nav() {
         </div>
         <div>X</div>
       </div>
-
+      <div className={styles.PlayerProfile}>
+        <header>DINO</header>
+      </div>
       {/*
         Menu
           @Desc: Contains all the menu buttons and the routes that they link to.
     */}
-      <div className={styles.Menu} style={{ color: 'white'}}>
-        Menu
-        {buttons.map(({ id, route, text, src }) => {
+      <div className={styles.Menu}>
+        <div className={styles.MenuHeader}>MENU</div>
+        {buttons.map(({ id, route, text, iconClass }) => {
           return (
             <NavLink
               key={id}
@@ -75,12 +67,16 @@ export default function Nav() {
             >
               <NavButton
                 text={text}
-                src={src}
+                iconClass={iconClass}
                 activeStyle={activeButton === id ? "#2a475e" : null}
               />
             </NavLink>
           );
         })}
+      </div>
+      <div style={{ color: "white" }}>
+        <div className={styles.MenuHeader}>USEFUL LINKS</div>
+
       </div>
     </div>
   );

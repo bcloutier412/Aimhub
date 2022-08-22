@@ -7,10 +7,10 @@ import styles from './NavButton.module.css'
                 src: The src for the button img
                 activeStyle: This prop will either be a color value or null based on if the button is active
 */
-export default function NavButton({ text, src, activeStyle }) {
+export default function NavButton({ text, iconClass, activeStyle }) {
     return (
         <div className={styles.button} style={{backgroundColor: activeStyle}}>
-        <img alt={`${text} icon`} src={src}/>
+        <i class={iconClass} style={{marginRight: '10px'}}></i>
         {text}
         </div>
     )
