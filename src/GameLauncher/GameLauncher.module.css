@@ -1,17 +1,13 @@
 .body {
-  display: flex;
-  justify-content: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: grid;
+  grid-template-columns: 2fr 9fr;
 }
 .MainContainer {
-  width: 55%;
   height: 100vh;
   background-color: #0c1220;
-  border: 5px solid #2a475e;
-  border-left: none;
-  border-right: none;
 }

@@ -12,3 +12,7 @@ html {
 html::-webkit-scrollbar {
   display: none;
 }
+
+.icon {
+  display: inline-block;
+}

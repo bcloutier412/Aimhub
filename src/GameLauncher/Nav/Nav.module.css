@@ -1,7 +1,17 @@
 .Nav {
-    width: 20%;
     height: 100vh;
-    background-color: #0c1220;
-    text-align: center;
-    border: 5px solid #2a475e;
+    background-color: #141b2e;
+    padding: 1.5em;
+}
+
+.NavHeader {
+    /* width: 100%; */
+    vertical-align: middle;
+    font-family: 'Black Ops One', cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    /* color: rgba(83,179,203,1); */
+    color: rgb(36, 183, 194);
 }
