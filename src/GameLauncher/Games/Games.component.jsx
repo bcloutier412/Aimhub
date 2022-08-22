@@ -20,6 +20,12 @@ const games = [
     route: '../ReactionTrainer',
     style: ''
   },
+  {
+    id: 1,
+    name: 'Reaction Trainer',
+    route: '../ReactionTrainer',
+    style: ''
+  },
 ];
 
 /*
@@ -29,26 +35,28 @@ const games = [
     Each game widet will have a button to change the react route to 
     start the game (Changing the main window to the Game)
 */
+// <NavLink to={game.route} style={{ textDecoration: "none" }}>
+//                   <div className={styles.button}>
+//                     <img alt='play button' src={playBtn} />
+//                     <span className={styles.playText}>PLAY</span>
+//                   </div>
+//                 </NavLink>
 export default function Games() {
   return (
-    <div className={styles.games}>
-      <header>GAMES</header>
-      {games.map((game) => {
-        return (
-          <div className={`${styles.gameWidget} ${game.style}`} key={game.id}>
-            <div className={styles.gameInfo}>
-              <div className={styles.gameHeader}>{game.name}</div>
-              <NavLink to={game.route} style={{ textDecoration: "none" }}>
-                <div className={styles.button}>
-                  <img alt='play button' src={playBtn} />
-                  <span className={styles.playText}>PLAY</span>
-                </div>
-              </NavLink>
-            </div>
+    <>
+      <div className={styles.gameInfo}></div>
+      <div className={styles.gameWidgets}>
+        <div className={styles.header}>GAMES</div>
+        <div className={styles.games}>
+          {games.map((game) => {
+            return(
+              <div className={styles.gameWidget}>
 
-          </div>
-        );
-      })}
-    </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </>
   );
 }
