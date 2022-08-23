@@ -1,7 +1,10 @@
-import styles from './Games.module.css';
-import { NavLink } from 'react-router-dom';
-import playBtn from '../assets/playbtn.png';
-import { useState } from 'react';
+import styles from "./Games.module.css";
+// import { NavLink } from "react-router-dom";
+// import playBtn from "../assets/playbtn.png";
+import { useState } from "react";
+
+//Game Assets
+import aimlabsScreenshot from "../assets/aimlabsscreenshot.png";
 
 /*
   Games Data Array
@@ -11,18 +14,19 @@ import { useState } from 'react';
 const games = [
   {
     id: 0,
-    name: 'Grid Shot',
-    route: '../GridShot',
+    name: "Grid Shot",
+    route: "../GridShot",
+    gameImage: aimlabsScreenshot,
   },
   {
     id: 1,
-    name: 'Reaction Trainer',
-    route: '../ReactionTrainer',
+    name: "Reaction Trainer",
+    route: "../ReactionTrainer",
   },
   {
     id: 2,
-    name: 'Reaction Trainer',
-    route: '../ReactionTrainer',
+    name: "Relex Trainer",
+    route: "../ReactionTrainer",
   },
 ];
 
@@ -40,19 +44,32 @@ const games = [
 //                   </div>
 //                 </NavLink>
 export default function Games() {
-  const [currentGame, changeCurrentGame] = useState(0)
+  const [currentGame, changeCurrentGame] = useState(0);
   return (
     <>
-      <div className={styles.gameInfo}></div>
-      <div className={styles.gameWidgets}>
+      <div
+        className={styles.gameInfoContainer}
+        style={{ backgroundImage: `url(${games[currentGame].gameImage})` }}
+      >
+        <div className={styles.gameInfo}></div>
+      </div>
+      <div className={styles.games}>
         <div className={styles.header}>GAMES</div>
-        <div className={styles.games}>
+        <div className={styles.gameWidgets}>
           {games.map((game) => {
-            return(
-              <div className={styles.gameWidget} key={game.id}>
-
+            return (
+              <div
+                className={styles.gameWidget}
+                key={game.id}
+                onClick={() => changeCurrentGame(game.id)}
+              >
+                <div className={styles.gameWidgetImage}></div>
+                <div className={styles.gameWidgetText}>
+                  <h4>2022</h4>
+                  <h3>{game.name}</h3>
+                </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>

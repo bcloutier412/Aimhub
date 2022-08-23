@@ -46,7 +46,7 @@ export default function Nav() {
           ></i>
           <div>AimHub</div>
         </div>
-        <div>X</div>
+        <div className={styles.navToggle}>X</div>
       </div>
       <div className={styles.PlayerProfile}>
         <header>DINO</header>
