@@ -10,7 +10,7 @@ import styles from './NavButton.module.css'
 export default function NavButton({ text, iconClass, activeStyle }) {
     return (
         <div className={styles.button} style={{backgroundColor: activeStyle}}>
-        <i class={iconClass} style={{marginRight: '10px'}}></i>
+        <i className={iconClass} style={{marginRight: '10px'}}></i>
         {text}
         </div>
     )

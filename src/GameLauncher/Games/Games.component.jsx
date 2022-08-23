@@ -1,6 +1,7 @@
 import styles from './Games.module.css';
 import { NavLink } from 'react-router-dom';
 import playBtn from '../assets/playbtn.png';
+import { useState } from 'react';
 
 /*
   Games Data Array
@@ -12,19 +13,16 @@ const games = [
     id: 0,
     name: 'Grid Shot',
     route: '../GridShot',
-    style: styles.gridShot
   },
   {
     id: 1,
     name: 'Reaction Trainer',
     route: '../ReactionTrainer',
-    style: ''
   },
   {
-    id: 1,
+    id: 2,
     name: 'Reaction Trainer',
     route: '../ReactionTrainer',
-    style: ''
   },
 ];
 
@@ -42,6 +40,7 @@ const games = [
 //                   </div>
 //                 </NavLink>
 export default function Games() {
+  const [currentGame, changeCurrentGame] = useState(0)
   return (
     <>
       <div className={styles.gameInfo}></div>
@@ -50,7 +49,7 @@ export default function Games() {
         <div className={styles.games}>
           {games.map((game) => {
             return(
-              <div className={styles.gameWidget}>
+              <div className={styles.gameWidget} key={game.id}>
 
               </div>
             )

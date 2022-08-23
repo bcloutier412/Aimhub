@@ -41,7 +41,7 @@ export default function Nav() {
       <div className={styles.NavHeader}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <i
-            class="gg-circleci icon"
+            className={"gg-circleci icon"}
             style={{ marginRight: "10px", transform: "translateY(-1px)" }}
           ></i>
           <div>AimHub</div>
