@@ -17,19 +17,23 @@ const games = [
     name: "Grid Shot",
     route: "../GridShot",
     gameImage: aimlabsScreenshot,
-    attributes: ["speed", "mouse control", "consistency"],
+    attributes: ["speed", "percision", "consistency"],
+    description:
+      "Grid Shot is designed to develop your mouse control and percision. Seven targets will spawn randomly across an invisible grid on the screen. Kill one and another spawns so there are always seven targets on the screen",
   },
   {
     id: 1,
     name: "Reaction Trainer",
     route: "../ReactionTrainer",
     attributes: ["speed", "reaction time"],
+    description: "Coming soon"
   },
   {
     id: 2,
     name: "Reflex Trainer",
     route: "../ReactionTrainer",
     attributes: ["speed", "reflexes", "muscle memory", "consistency"],
+    description: "Coming Soon"
   },
 ];
 
@@ -67,10 +71,7 @@ export default function Games() {
             <div className={styles.gameDescription}>
               <h3>Description</h3>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-              
+                {games[currentGame].description}
               </p>
             </div>
             <div className={styles.playBtn}>

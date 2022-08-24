@@ -5,6 +5,7 @@ import GridShot from "./GridShot/GridShot.component";
 import ReactionTimer from "./ReactionTrainer/ReactionTimer.component";
 import Profile from "./GameLauncher/Profile/Profile.component.jsx";
 import Stats from "./GameLauncher/Stats/Stats.component.jsx";
+import News from './GameLauncher/News/News.component.jsx'
 
 export default function App() {
   return (
@@ -21,7 +22,7 @@ export default function App() {
           <Route path="profile" element={<Profile />} />
           <Route path="games" element={<Games />} />
           <Route path="stats" element={<Stats />} />
-          {/* <Route path="news" element={<News />} /> */}
+          <Route path="news" element={<News />} />
         </Route>
         {/* 
           Grid Shot Game

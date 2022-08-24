@@ -10,3 +10,9 @@
 .MainContainer {
   height: 100vh;
 }
+
+@media (max-width: 1205px) {
+  .body {
+    display: block;
+  }
+}
