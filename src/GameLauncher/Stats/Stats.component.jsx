@@ -1,7 +1,12 @@
+import React, { Suspense, lazy } from 'react';
 import styles from './Stats.module.css'
+
+const StatsContainer = lazy(() => import('./StatsContainer.component'))
 
 export default function Stats() {
     return(
-        <div>I am the stats container</div>
+        <Suspense fallback={<div>Im Loading...</div>}>
+            <StatsContainer />
+        </Suspense>
     )
 }

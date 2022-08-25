@@ -19,7 +19,7 @@ const games = [
     gameImage: aimlabsScreenshot,
     attributes: ["speed", "percision", "consistency"],
     description:
-      "Grid Shot is designed to develop your mouse control and percision. Seven targets will spawn randomly across an invisible grid on the screen. Kill one and another spawns so there are always seven targets on the screen",
+      "Grid Shot is designed to develop your speed, mouse control, and percision. Seven targets will spawn randomly across an invisible grid on the screen. Kill one and another spawns so there are always seven targets on the screen",
   },
   {
     id: 1,
