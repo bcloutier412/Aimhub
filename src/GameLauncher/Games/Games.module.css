@@ -20,7 +20,7 @@
   width: 80%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-gap: 5%;
 }
 .gameAttributes {
@@ -53,7 +53,6 @@
   height: 70%;
   width: 80%;
   margin: 0 auto;
-  /* overflow-y: scroll; */
 }
 .gameWidgets {
   display: flex;
@@ -64,12 +63,12 @@
   height: 80%;
 }
 .gameWidgets::-webkit-scrollbar {
-    display: none;
-  }
-  .gameWidgets {
-    -ms-overflow-style: none;
-    scrollbar-width: none; 
-  }
+  display: none;
+}
+.gameWidgets {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 .gameWidget {
   width: 300px;
   height: 300px;
@@ -148,4 +147,113 @@
 
 .active {
   box-shadow: 0 0 5px #2a475e;
+}
+
+@media (max-width: 979px) {
+  .games {
+    height: 62%;
+  }
+  .gameInfo {
+    height: 32%;
+  }
+  .gameWidget {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 860px) {
+  .gameInfo {
+    width: 95%;
+  }
+  .header {
+    margin-left: 2.5%;
+  }
+}
+
+@media (max-width: 725px) {
+  .gameInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .gameTitle h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    font-size: 25px;
+  }
+  .gameAttribute {
+    font-size: 12px;
+    padding: 1px 10px;
+    border: 1px solid #2e6088;
+    border-radius: 25px;
+  }
+  .gameDescription h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+  }
+  .gameDescription p {
+    font-size: 15px;
+  }
+  .playBtn {
+    position: absolute;
+    right: 20px;
+    margin-top: 0;
+  }
+  .button {
+    margin-top: 10px;
+  }
+  .gameWidgets {
+    gap: 5px;
+    height: 100%;
+  }
+  .gameWidget {
+    width: 200px;
+    height: 200px;
+  }
+  .header {
+    height: 30px;
+  }
+}
+
+@media (max-width: 477px) {
+  .gameTitle h1 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    font-size: 22px;
+  }
+  .gameDescription h3 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+  }
+  .gameDescription p {
+    font-size: 12px;
+  }
+  .gameWidgets {
+    height: 100%;
+  }
+  .button {
+    width: 100px;
+  }
+}
+@media (max-width: 390px) {
+  .gameWidget {
+    height: 180px;
+    width: 180px;
+  }
+} 
+@media (max-width: 382px) {
+  .gameInfo {
+    height: 40%;
+  }
+  .games {
+    height: 60%;
+  }
+  .gameWidgets {
+    height: 87%;
+  }
 }
