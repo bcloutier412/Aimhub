@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import styles from './Stats.module.css'
+// import styles from './Stats.module.css'
 
 const StatsContainer = lazy(() => import('./StatsContainer.component'))
 
