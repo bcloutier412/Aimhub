@@ -31,13 +31,15 @@ const buttons = [
 ];
 
 export default function Nav() {
-  const [activeButton, changeActiveButton] = useState(1);
+  const [activeButtonId, changeActiveButton] = useState(1);
+  const [isCollapsed, toggleCollapse] = useState(true);
+
   return (
     /*
       Nav Header
         @Desc: Displays the Logo, Website Name and the toggle nav button
     */
-    <div className={styles.Nav}>
+    <div className={`${styles.Nav} ${isCollapsed ? styles.collapsed : null}`}>
       <div className={styles.NavHeader}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <i
@@ -46,7 +48,14 @@ export default function Nav() {
           ></i>
           <div>AimHub</div>
         </div>
-        <div className={styles.navToggle}>X</div>
+        <div
+          className={`${styles.navToggle} ${
+            isCollapsed ? styles.navToggleCollapsed : null
+          }`}
+          onClick={() => toggleCollapse(!isCollapsed)}
+        >
+          {isCollapsed ? 'U' : 'X'}
+        </div>
       </div>
       <div className={styles.PlayerProfile}>
         <header>DINO</header>
@@ -68,7 +77,7 @@ export default function Nav() {
               <NavButton
                 text={text}
                 iconClass={iconClass}
-                activeStyle={activeButton === id ? "#2a475e" : null}
+                activeStyle={activeButtonId === id ? "#2a475e" : null}
               />
             </NavLink>
           );
@@ -76,7 +85,6 @@ export default function Nav() {
       </div>
       <div style={{ color: "white" }}>
         <div className={styles.MenuHeader}>USEFUL LINKS</div>
-
       </div>
     </div>
   );

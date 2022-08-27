@@ -2,6 +2,7 @@
   height: 100vh;
   background-color: #141b2e;
   padding: 1.5em;
+  transition: transform .2s;
 }
 
 .NavHeader {
@@ -32,8 +33,24 @@
 .MenuHeader {
   margin-bottom: 25px;
 }
+.navToggle {
+  display: none;
+  transition: transform .2s;
+}
+.navToggle:hover {
+  cursor: pointer;
+}
 @media (max-width: 1205px) {
   .Nav {
     position: absolute;
+  }
+  .collapsed {
+    transform: translateX(-250px)
+  }
+  .navToggle {
+    display: block;
+  }
+  .navToggleCollapsed {
+    transform: translateX(50px);
   }
 }
