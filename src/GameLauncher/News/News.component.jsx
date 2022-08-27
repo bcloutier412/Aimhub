@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import styles from './News.module.css'
+// import styles from './News.module.css'
 
 const NewsContainer = lazy(() => import('./NewsContainer.component'))
 
