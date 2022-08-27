@@ -13,7 +13,7 @@
 .gamesWrapper {
   width: 100%;
   height: 60%;
-  background: rgba(12, 18, 32, 0.98);
+  background: rgba(12, 18, 32, 0.9);
 }
 .gameInfo {
   height: 30%;
@@ -76,7 +76,7 @@
   margin-top: 5px;
 }
 .gameWidget:hover {
-  box-shadow: 0 0 4px #2a475e;
+  box-shadow: 0 0 8px #7a9db9;
   cursor: pointer;
 }
 .gameWidgetImage {
@@ -129,7 +129,9 @@
 .button:hover {
   background-color: #0361a8;
 }
-
+.active {
+  box-shadow: 0 0 8px #7a9db9;
+}
 /* .gridShot {
     back
     background-size: 40px 40px;
@@ -143,10 +145,6 @@
   .header {
     margin-left: 10%;
   }
-}
-
-.active {
-  box-shadow: 0 0 5px #2a475e;
 }
 
 @media (max-width: 979px) {
