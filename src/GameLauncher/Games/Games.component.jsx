@@ -32,7 +32,7 @@ const games = [
     id: 2,
     name: "Reflex Trainer",
     route: "../ReactionTrainer",
-    attributes: ["speed", "reflexes", "muscle memory", "consistency"],
+    attributes: [ "muscle memory", "consistency"],
     description: "Coming Soon"
   },
 ];
