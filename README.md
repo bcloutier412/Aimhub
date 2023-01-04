@@ -2,6 +2,8 @@
 <p>Aimhub is a game launcher application that hosts three different aim trainers where esports players can develop in-game aim mechanics such as reflexes, muscle memory, reaction time, and mouse movement.</p>
 
 ![AimhubScreenshot](/git-img/AimhubScreenshot.png)
+![AimhubScreenshot](/git-img/AimhubGridshotScreenshot.png)
+![AimhubScreenshot](/git-img/AimhubGridshotGameScreenshot.png)
 
 <h1>How it was made</h1>
 <ul>
