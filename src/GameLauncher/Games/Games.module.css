@@ -81,7 +81,8 @@
 }
 .gameWidgetImage {
   height: 60%;
-  background-color: purple;
+  background-size:contain;
+  background-position-x: center;
 }
 .gameWidgetText {
   height: 40%;
