@@ -67,8 +67,8 @@ class Timer extends React.Component {
     super(props);
     this.state = {
       // minute: this.props.minute,
-      minute: 0,
-      second: 5,
+      minute: 1,
+      second: 0,
     };
   }
   formatSeconds(second) {
