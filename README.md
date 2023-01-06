@@ -5,7 +5,7 @@
 ![AimhubScreenshot](/git-img/AimhubGridshotScreenshot.png)
 ![AimhubScreenshot](/git-img/AimhubGridshotGameScreenshot.png)
 
-<h1>How it was made</h1>
+<h2>How it was made</h2>
 <ul>
   <li>React.js</li>
   <li>React Router</li>
